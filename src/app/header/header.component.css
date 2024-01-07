@@ -1,0 +1,22 @@
+nav img{
+    width: 70px;
+    border-radius: 50%;
+    
+}
+nav{
+    background-color: rgb(160, 92, 168);
+    padding: 4px;
+}
+ul{
+    float: right;
+    list-style-type: none;
+}
+ul li{ 
+    display: inline;
+    padding: 10px;
+}
+li a{
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
+}

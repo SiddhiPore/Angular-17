@@ -5,13 +5,14 @@ import { UserComponent } from './user/user.component';
 import { UserModuleModule } from './user-module/user-module.module';
 import { LoginComponent } from './user-module/login/login.component';
 import { count } from 'console';
+import { HeaderComponent } from './header/header.component';
 
   
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, UserComponent, UserModuleModule, LoginComponent],
+  imports: [CommonModule, RouterOutlet, UserComponent, UserModuleModule, LoginComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
