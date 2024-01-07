@@ -97,8 +97,6 @@
 
 <h3><u>Nested For Loop</u></h3>
 
-
-
    
 @for(d of studentdetail;track d){
     <p>Name: {{d.name}} -> Age: {{d.age}}</p>
@@ -106,4 +104,9 @@
     <ul> <li>{{g}}</li></ul>
     } }
    
-  
+    <hr/>
+  <h3><u>Style Binding</u></h3>
+
+  <h1 [style.color]="color1" [style.backgroundColor]="bgColor"> Hello EveryOne</h1> 
+
+<button (click)="updateColor()">Update Color</button>

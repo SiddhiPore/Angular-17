@@ -76,5 +76,13 @@ export class AppComponent {
       {name:'Vivek' , age:'58',social:['Insta','facebook']},
       {name:'Siddhi', age:'43', social:['Insta', 'Snapchat']}
     ]
+
+    color1="blue";
+    bgColor="orange"
+    updateColor()
+    {
+      this.color1="orange"
+      this.bgColor="blue"
+    }
 }
 
