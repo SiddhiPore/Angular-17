@@ -113,4 +113,21 @@
   <h1 [style.color]="color1" [style.backgroundColor]="bgColor"> Hello EveryOne</h1> 
 
 <button (click)="updateColor()">Update Color</button>
+<hr/>
 
+<h3><u>Basic Form</u></h3>
+
+<form #basicForm="ngForm" (ngSubmit)="getForm(basicForm.value)">
+ <input type="text" ngModel placeholder="Enter your UserName" name="user"> <br/><br/>
+ <input type="email" ngModel placeholder="Enter your Email" name="email"><br/><br/>
+ <input type="password" ngModel placeholder="Enter your Password" name="pass"><br/><br/>
+ <button>Submit</button>
+
+
+</form>
+
+<ul>
+    <li>{{userData.user}}</li>
+    <li>{{userData.email}}</li>
+    <li>{{userData.pass}}</li>
+</ul>

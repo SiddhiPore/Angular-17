@@ -6,13 +6,16 @@ import { UserModuleModule } from './user-module/user-module.module';
 import { LoginComponent } from './user-module/login/login.component';
 import { count } from 'console';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+
 
   
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, UserComponent, UserModuleModule, LoginComponent, HeaderComponent],
+  imports: [CommonModule, RouterOutlet, UserComponent, UserModuleModule, LoginComponent, HeaderComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -84,6 +87,14 @@ export class AppComponent {
     {
       this.color1="orange"
       this.bgColor="blue"
+    }
+
+
+     userData:any={};
+    getForm(data:NgForm)
+    {
+      console.warn(data);
+      this.userData=data;
     }
 }
 
