@@ -32,10 +32,12 @@
 
 <hr/>
 <h3><u>Counter Example</u></h3>
+<button (click)="toggle()">Toggle</button> <br/> <br/>
+@if(display){
 <button (click)="getCount('minus')">--</button>
 <p>cout : {{count}}</p>
 <button (click)="getCount('add')">++</button>
-
+}
 <hr/>
 <h3><u>If Else</u></h3>
 
@@ -131,3 +133,11 @@
     <li>{{userData.email}}</li>
     <li>{{userData.pass}}</li>
 </ul>
+
+<hr/>
+<h3><u>Toggle Element</u></h3>
+<button (click)="toggle()">Toggle </button>
+@if(display)
+{
+    <h1>Heding tag</h1>
+}

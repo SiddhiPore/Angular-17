@@ -41,6 +41,7 @@ export class AppComponent {
     console.warn(val1)
     this.displayVal=val1
   }
+  
  count=0
   getCount(type:string)
   {
@@ -95,6 +96,11 @@ export class AppComponent {
     {
       console.warn(data);
       this.userData=data;
+    }
+    display=false;
+    toggle()
+    {
+      this.display=!this.display;
     }
 }
 
