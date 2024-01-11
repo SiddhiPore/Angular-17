@@ -1,0 +1,20 @@
+mat-card
+{
+    margin-left: 30%;
+    width: 35%;
+    background-color: rgb(200, 240, 237);
+    padding: 30px;
+    padding-left: 100px;
+}
+mat-card mat-card-content h1{
+    color: rgb(90, 24, 77);
+}
+mat-card mat-card-content mat-list mat-list-item button {
+    float: right;
+}
+
+mat-card mat-card-content mat-list mat-list-item
+{
+    background-color: rgb(132, 214, 197);
+    border-radius: 10px;
+}
