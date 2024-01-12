@@ -36,6 +36,11 @@ export class AppComponent {
   {
     this.data= Math.floor(Math.random()*10)
   }
-
+  userdetails=[
+    {name:'Siddhi Pore', email:'sp14@gmail.com', gen:'Female'},
+    {name:'Vedika Upare', email:'vu17@gmail.com', gen:'Female'},
+    {name:'Shraddha Shinde', email:'ss03@gmail.com', gen:'Female'},
+    {name:'Atharv More', email:'am05@gmail.com', gen:'Male'},
+  ]
   
 }

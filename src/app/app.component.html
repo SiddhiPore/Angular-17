@@ -23,9 +23,12 @@
 
 <h3><u>Pass data from parent to child</u></h3>
 <label >Data from parent to child : </label><app-child [item]="data"></app-child>
-<button (click)="updateData()">Update data</button>
+<button (click)="updateData()" mat-raised-button color="primary" >Update data</button>
 
+<hr>
 
-
-
+<h3><u>Reusability of Component</u></h3>
+@for(item of userdetails ; track item){
+<app-child [user]="item" ></app-child>
+}
 
