@@ -1,0 +1,3 @@
+
+<input type="text" #box onfocus="this.value=''">
+<button (click)="messageEvent.emit(box.value)">Update Data</button>

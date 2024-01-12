@@ -7,11 +7,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { ChildComponent } from './child/child.component';
+import { Child2Component } from './child2/child2.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent],
+  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -42,5 +43,11 @@ export class AppComponent {
     {name:'Shraddha Shinde', email:'ss03@gmail.com', gen:'Female'},
     {name:'Atharv More', email:'am05@gmail.com', gen:'Male'},
   ]
+  pass= ' ';
+  update(item:string)
+  {
+    console.warn(item);
+    this.pass=item;
+  }
   
 }

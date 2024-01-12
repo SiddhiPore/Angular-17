@@ -13,4 +13,6 @@ export class ChildComponent {
 
   @Input() user:{name : string, email: string, gen: string}={name :'',email:'', gen:''};
 
+  
+
 }

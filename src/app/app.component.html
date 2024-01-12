@@ -31,4 +31,12 @@
 @for(item of userdetails ; track item){
 <app-child [user]="item" ></app-child>
 }
+<hr>
+<h3><u>Pass data from child to parent</u></h3>
 
+
+
+<app-child2 (messageEvent)="update($event)"> </app-child2>
+<h3>{{pass}}</h3>
+
+<hr>
