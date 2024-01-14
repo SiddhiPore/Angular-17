@@ -9,12 +9,13 @@ import {MatListModule} from '@angular/material/list';
 import { ChildComponent } from './child/child.component';
 import { Child2Component } from './child2/child2.component';
 import { FormsModule } from '@angular/forms';
+import { Task1Component } from './task1/task1.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule],
+  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule, Task1Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -53,5 +54,8 @@ export class AppComponent {
   }
 name: any;
 
-  
+  getData(item : any)
+  {
+    console.warn(item)
+  }
 }

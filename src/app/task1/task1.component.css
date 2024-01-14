@@ -1,0 +1,14 @@
+mat-card{
+    background-color: rgb(184, 224, 211);
+    width: 40%;
+    height: 300px;
+    padding: 20px;
+    margin-left: 200px;
+    
+
+}
+mat-card mat-card-content img {
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+}

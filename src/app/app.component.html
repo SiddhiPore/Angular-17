@@ -13,7 +13,6 @@
   <mat-list>
     <mat-list-item>{{i.name}} <button (click)="Remove(i.id)"   mat-raised-button color="warn">Remove</button></mat-list-item> <br>
     <mat-divider></mat-divider>
-
   </mat-list>
 }
 </mat-card-content>
@@ -31,10 +30,9 @@
 @for(item of userdetails ; track item){
 <app-child [user]="item" ></app-child>
 }
+
 <hr>
 <h3><u>Pass data from child to parent</u></h3>
-
-
 
 <app-child2 (messageEvent)="update($event)"> </app-child2>
 <h3>{{pass}}</h3>
@@ -44,3 +42,11 @@
 <h3><u>Two way binding</u></h3>
 <input type="text" [(ngModel)]="name">
 <h4>{{name}}</h4>
+
+<hr>
+<h3><u>Template Reference Variable</u></h3>
+<input type="text" #id placeholder="Enter Your Name" name="name">
+<button (click)="getData(id.value)">Give Value</button>
+
+<hr>
+
