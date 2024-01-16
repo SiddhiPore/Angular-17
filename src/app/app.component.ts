@@ -70,4 +70,9 @@ name: any;
     console.warn(item,item2)
     // You can perform any validation or additional logic here before sending the data
   }
+
+  login(item : any)
+  {
+    console.warn(item);
+  }
 }
