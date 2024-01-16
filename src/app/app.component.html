@@ -30,6 +30,10 @@
 @for(item of userdetails ; track item){
 <app-child [user]="item" ></app-child>
 }
+<hr>
+
+
+
 
 <hr>
 <h3><u>Pass data from child to parent</u></h3>
@@ -46,7 +50,50 @@
 <hr>
 <h3><u>Template Reference Variable</u></h3>
 <input type="text" #id placeholder="Enter Your Name" name="name">
+<input type="text" #id placeholder="Enter Your Name" name="name">
 <button (click)="getData(id.value)">Give Value</button>
 
 <hr>
+
+<h3><u> Basic Pipes In Angular</u></h3>
+<h2>{{title | uppercase}} </h2>
+<h2>{{title | lowercase}} </h2>
+<h2>{{date | date:'fullDate'}} </h2>
+<h2>{{date | date}} </h2>
+
+<hr>
+ 
+<h3><u>Advance Pipes</u></h3>
+<h4>{{title | slice : 2}}</h4>
+<h4>{{title | slice : 2:5}}</h4>
+<h4>{{title | uppercase | slice :2}}</h4>
+<h4>{{userdetails | json}}</h4>
+<h4>{{544.23 |  number : '6.4-5'}}</h4>
+<h4>{{20 | currency: 'INR'}}</h4>
+<hr>
+
+<h3><u>Custom Pipes</u></h3>
+<h4>{{340 | currency}}</h4>
+
+
+<hr>
+<div>
+  <h2>Parent Component</h2>
+  <input [value]="parentImageUrl"  placeholder="Image URL" onfocus="this.value=''" #id1>
+  <input [value]="parentImageDescription"  placeholder="Image Description" onfocus="this.value=''" #id2>
+  <button (click)="sendDataToChild(id1.value , id2.value)">Send Data to Child</button>
+  <br><br><br>
+  <app-task1
+    [childImageUrl]="id1.value"
+    [childImageDescription]="id2.value"
+  ></app-task1>
+</div>
+
+<br><br><br>
+<hr>
+
+
+
+
+
 

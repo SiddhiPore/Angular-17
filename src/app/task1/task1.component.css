@@ -1,14 +1,14 @@
-mat-card{
-    background-color: rgb(184, 224, 211);
-    width: 40%;
-    height: 300px;
-    padding: 20px;
-    margin-left: 200px;
+mat-card img{
     
-
-}
-mat-card mat-card-content img {
-    width: 200px;
     border-radius: 50%;
-    float: left;
+}
+div p{
+    margin-left: 600px;
+}
+mat-card{
+    padding: 20px;
+    width: 200px;
+    height: auto;
+    background-color: azure;
+    
 }

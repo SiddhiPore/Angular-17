@@ -58,4 +58,16 @@ name: any;
   {
     console.warn(item)
   }
+  date= Date();
+
+
+
+
+  parentImageUrl: string = '';
+  parentImageDescription: string = '';
+
+  sendDataToChild(item:any , item2: any) {
+    console.warn(item,item2)
+    // You can perform any validation or additional logic here before sending the data
+  }
 }
