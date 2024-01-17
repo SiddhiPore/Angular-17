@@ -4,7 +4,7 @@ import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
     {
-        path : 'user',
+        path : 'user/:id',
         component: UserComponent // we can also give blank path to show as front page
     },
 
