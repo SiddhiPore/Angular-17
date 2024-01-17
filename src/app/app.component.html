@@ -100,6 +100,16 @@
   <button >Submit</button>
 </form>
 
+<h3><u>Reactive Form</u></h3>
+<form [formGroup]="loginform" (ngSubmit)="getReactiveForm()">
+  <input type="text" placeholder="Enter Name" formControlName="name">
+  <br><br>
+  <input type="email" placeholder="Enter Email" formControlName="email">
+  <br><br>
+  <button>Submit</button>
+</form>
+
+
 
 
 

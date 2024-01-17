@@ -8,14 +8,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { ChildComponent } from './child/child.component';
 import { Child2Component } from './child2/child2.component';
-import { FormsModule } from '@angular/forms';
+import {  FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule , FormControlName} from '@angular/forms';
 import { Task1Component } from './task1/task1.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule, Task1Component],
+  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule, Task1Component, ReactiveFormsModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -61,8 +62,6 @@ name: any;
   date= Date();
 
 
-
-
   parentImageUrl: string = '';
   parentImageDescription: string = '';
 
@@ -75,4 +74,15 @@ name: any;
   {
     console.warn(item);
   }
+
+  
+  loginform = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl('')
+  })
+
+  getReactiveForm(){
+    console.warn(this.loginform.value);
+  }
+  
 }
