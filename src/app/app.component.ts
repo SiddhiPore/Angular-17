@@ -8,7 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { ChildComponent } from './child/child.component';
 import { Child2Component } from './child2/child2.component';
-import {  FormsModule } from '@angular/forms';
+import {  FormsModule, Validators } from '@angular/forms';
 import { FormControl, FormGroup, ReactiveFormsModule , FormControlName} from '@angular/forms';
 import { Task1Component } from './task1/task1.component';
 
@@ -77,12 +77,26 @@ name: any;
 
   
   loginform = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl('')
+    user: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.email]),
+    // password:new FormControl('',[Validators.minLength(8)])
+    
+    
+
   })
 
   getReactiveForm(){
     console.warn(this.loginform.value);
+  }
+
+  get user()
+  {
+    return this.loginform.get('user')
+  }
+
+  get email()
+  {
+    return this.loginform.get('email'); 
   }
   
 }
