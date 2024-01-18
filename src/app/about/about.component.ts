@@ -3,6 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
 
 
+
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -11,5 +12,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-
+ 
 }

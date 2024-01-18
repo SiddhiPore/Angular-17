@@ -11,12 +11,14 @@ import { Child2Component } from './child2/child2.component';
 import {  FormsModule, Validators } from '@angular/forms';
 import { FormControl, FormGroup, ReactiveFormsModule , FormControlName} from '@angular/forms';
 import { Task1Component } from './task1/task1.component';
+import{UserdataService} from './service/userdata.service';
+import { NoPageComponent } from './no-page/no-page.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule, Task1Component, ReactiveFormsModule, RouterLink ],
+  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule, Task1Component, ReactiveFormsModule, RouterLink ,NoPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -97,6 +99,12 @@ name: any;
   get email()
   {
     return this.loginform.get('email'); 
+  }
+  users:any;
+  constructor (private userdata : UserdataService)
+  {
+      console.warn("Userdata", userdata.user())
+      this.users=userdata.user();
   }
   
 }

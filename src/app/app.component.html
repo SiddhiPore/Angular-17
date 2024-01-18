@@ -138,3 +138,13 @@
 <a href="about">about</a>
 
 <router-outlet></router-outlet>
+
+<h3><u>Services</u></h3>
+@for(i of users ; track i)
+{
+  <u>
+    <li>{{i.name}} : {{i.email}}</li>
+  </u>
+}
+
+<app-no-page></app-no-page>
