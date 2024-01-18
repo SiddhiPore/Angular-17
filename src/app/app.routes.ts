@@ -3,6 +3,7 @@ import { UserComponent } from './user/user.component';
 import { AboutComponent } from './about/about.component';
 import { NoPageComponent } from './no-page/no-page.component';
 import { ChildComponent } from './child/child.component';
+import { HomeComponent } from './header/home/home.component';
 
 
 
@@ -20,9 +21,15 @@ export const routes: Routes = [
             
         ]
     },
+    {path : 'home',
+     component:HomeComponent},
+     
     {
         path : '**',
         component: NoPageComponent
-    }
+    },
+
+
+    
 
 ];
