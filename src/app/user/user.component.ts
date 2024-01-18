@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -8,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
+
+
 export class UserComponent implements OnInit {
 
   constructor(private route: ActivatedRoute){}
@@ -17,3 +21,4 @@ export class UserComponent implements OnInit {
    this.userId =this.route.snapshot.paramMap.get('id');
  }
 }
+
