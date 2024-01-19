@@ -13,7 +13,11 @@ export const routes: Routes = [
         component: UserComponent // we can also give blank path to show as front page
     },
     {
-        path:'admin' , loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)},
+        path:'admin' , loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)
+    },
+    {
+        path:'patient' , loadChildren:()=>import('./patient/patient.module').then(m=>m.PatientModule)
+    },
 
     {
         path : 'about',

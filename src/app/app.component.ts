@@ -16,13 +16,14 @@ import { NoPageComponent } from './no-page/no-page.component';
 import { HeaderModule } from './header/header.module';
 import { HomeComponent } from './header/home/home.component';
 import { AdminModule } from './admin/admin.module';
+import { PatientModule } from './patient/patient.module';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule, Task1Component, ReactiveFormsModule, RouterLink ,NoPageComponent, HeaderModule,HomeComponent, AdminModule],
+  imports: [CommonModule, RouterOutlet,MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,MatListModule, ChildComponent, Child2Component, FormsModule, Task1Component, ReactiveFormsModule, RouterLink ,NoPageComponent, HeaderModule,HomeComponent, AdminModule, PatientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
