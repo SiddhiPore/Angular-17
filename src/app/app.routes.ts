@@ -12,6 +12,8 @@ export const routes: Routes = [
         path : 'user/:id',
         component: UserComponent // we can also give blank path to show as front page
     },
+    {
+        path:'admin' , loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)},
 
     {
         path : 'about',
@@ -23,6 +25,8 @@ export const routes: Routes = [
     },
     {path : 'home',
      component:HomeComponent},
+
+    
      
     {
         path : '**',
