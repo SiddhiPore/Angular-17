@@ -1,0 +1,37 @@
+mat-card
+{
+   margin-top: 20px;
+    margin-left: 27%;
+    width: 40%;
+   
+    background-color: rgb(216, 242, 224);
+    /* background-image: url("https://https://cdn1.vectorstock.com/i/thumb-large/97/40/school-supplies-vector-689740.jpg.com/full/4531811.png"); */
+    
+}
+.example-full-width input {
+   
+    width: 330px; 
+    height: 40px; 
+    font-size: 16px; 
+   
+  }
+mat-card mat-card-content h1{
+    color: rgb(90, 24, 77);
+}
+
+
+mat-card mat-card-content mat-list mat-list-item
+{
+    background-color: rgb(132, 214, 197);
+    border-radius: 10px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
