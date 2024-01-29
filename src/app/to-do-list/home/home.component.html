@@ -1,39 +1,49 @@
 <mat-card>
     <mat-card-content>
-  
   <h1 style="margin-left: 200px;"><b><u>To Do List</u></b></h1>
   <form class="example-form">
-    
-  
     <mat-form-field class="example-full-width">
       <mat-label>Add Task</mat-label>
-      <input matInput placeholder="Ex. Read Book.." name="task" #task onfocus="this.value=''" (focus)="clearDisplayString()" >
+      <input matInput placeholder="Ex. Read Book.." name="task"  #task (focus)="clearDisplayString()" onfocus="this.value=''" autocomplete="off" >
+    
     </mat-form-field>
   </form>
-  
   <br>
-  
-  <button style="margin-left: 390px; "  (click)="addtask(task.value)" (click)="displayValue('Task is added successfully!!!')"  mat-raised-button color="primary" [disabled]="!task.value">Add Task</button>
+  <h3 style="margin-left: 10px; color: blueviolet;" >Total Task : {{taskee}}</h3>
+  <button style="margin-left: 390px;"  (click)="addtask(task.value)" (click)="displayValue('Task is added successfully!!!')"  mat-raised-button color="primary" [disabled]="!task.value">Add Task</button> 
+ 
+  <!-- @if(!flag){
+    <button  mat-raised-button color="primary" style="margin-left: 390px;" [disabled]="!task.value" (click)="displayValue('Task is added successfully!!!')" class="btn btn-success" (click)="addtask(task.value)" >Add Task</button> 
+    &nbsp;}
+    @else{
+    <button mat-raised-button color="primary" style="margin-left: 390px;" [disabled]="!task.value" class="btn btn-success" (click)="updateTask(i.id,task.value)" >Update</button> 
+    &nbsp;}
+    <ng-content></ng-content>
+     -->
+    <br>
+
   <h3>{{display}}</h3>
-  
-  @for(i of taskdetail;track i)
+  @for(i of taskdetail; track i)
   {
-    
+
     <mat-list>
-      
       <mat-list-item>{{i.name}}
-        <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style" style="float: right;">
-          <mat-button-toggle style="color: rgb(176, 49, 49);" value="bold" (click)="Remove(i.id)">Remove</mat-button-toggle>
-          
-          <mat-button-toggle style="color: black;" value="underline" (click)="updateTask(i.id, task.value)">Update</mat-button-toggle>
-        </mat-button-toggle-group>
+       
+       <button  mat-raised-button color="warn"  (click)="Remove(i.id)"   style="float: right;">Remove</button>
+        <button mat-raised-button color="Primary" (click)="updateTask(i.id, task.value)" (click)="edit(task.id)"  style="float: right;">Update</button> 
+
+        
+          <!-- <button mat-raised-button color="Primary  (click)="Remove(task.id)" value="bold"  style="float: right;">Remove</button>
+          <button mat-mat-raised-button color="Primary"   value="bold" (click)="edit(task.id)" style="float: right;">Edit</button> -->
+       <!-- <button  mat-raised-button color="warn"  (click)="Remove(i.id)"   style="float: right;">Remove</button>
+        <button mat-raised-button color="Primary"  (click)="edit(task.id)"  style="float: right;">Edit</button> -->
          </mat-list-item> <br>
-      <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
     </mat-list>
   } 
   </mat-card-content>
   </mat-card>
-<br><br>
-  <h1 style="margin-left: 550px;">Total Task : {{taskee}}</h1>
+
+
 
   

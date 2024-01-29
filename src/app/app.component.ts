@@ -11,15 +11,15 @@ import {FormsModule} from '@angular/forms';
 import { ToDoListModule } from './to-do-list/to-do-list.module';
 import { HomeComponent } from './to-do-list/home/home.component';
 import { HeaderComponent } from './to-do-list/header/header.component';
-import { AlltaskComponent } from './to-do-list/alltask/alltask.component';
-import { AdminComponent } from './admin/admin.component';
+
+
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,RouterLink, MatCardModule,MatListModule,MatDividerModule,MatButtonModule,FormsModule, MatFormFieldModule, MatInputModule,ToDoListModule,HomeComponent,HeaderComponent,RouterOutlet, AlltaskComponent ,AdminComponent ],
+  imports: [CommonModule, RouterOutlet,RouterLink, MatCardModule,MatListModule,MatDividerModule,MatButtonModule,FormsModule, MatFormFieldModule, MatInputModule,ToDoListModule,HomeComponent,HeaderComponent,RouterOutlet  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
